@@ -1,0 +1,46 @@
+@import "index";
+
+.primary-button,
+.primary-button-corner,
+.default-button {
+  font-family: $font-family-b;
+  font-size: 1.67vw;
+  cursor: pointer;
+  outline: none;
+}
+
+.primary-button,
+.primary-button-corner {
+    background-color: $color-Purple-dark;
+    color: $color-white;
+    transition: background-color $animation;
+}
+
+.primary-button {
+    border-radius: 16px;
+}
+
+.primary-button-corner {
+    border-radius: 999px;
+}
+
+.primary-button:hover,
+.primary-button-corner:hover,
+.primary-button:focus,
+.primary-button-corner:focus {
+    background-color: $color-Purple-light;
+}
+
+.default-button {
+    border: 1px solid $color-gray-light;
+    background-color: transparent;
+    border-radius: 16px;
+    color: $color-Purple-dark;
+    transition: color $animation, border $animation;
+}
+
+.default-button:hover,
+.default-button:focus {
+    border: 1px solid $color-gray-soft;
+    color: $color-Purple-light;
+}

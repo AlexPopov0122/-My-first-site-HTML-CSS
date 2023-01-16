@@ -1,0 +1,309 @@
+@import "index";
+
+.footer {
+    display: flex;
+    justify-content: center;
+    padding: 3.82vw 9.03vw 12.85vw 9.03vw;
+    background-image: url("../images/background/Wavedesktop.svg");
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: contain;
+    gap: 9.03vw;
+}
+
+.footer-mobile {
+    display: none;
+}
+
+.footer-info-socials {
+
+    h3 {
+        color: $color-gray-light;
+        text-transform: uppercase;
+        font-family: $font-family-b;
+        font-size: 0.83vw;
+        line-height: 1.04vw;
+        letter-spacing: 0.17vw;
+        line-height: 1.05vw;
+        margin-bottom: 0.56vw;
+    }
+}
+
+.footer-socials-container {
+    align-items: center;
+    display: flex;
+    gap: 2.57vw;
+
+    a {
+        display: grid;
+        height: 2.78vw;
+        width: 2.78vw;
+        border-radius: 50%;
+        justify-content: center;
+        align-content: center;
+
+        &:hover,
+        &:focus {
+            background-color: $color-Yellow-light;
+            outline: none;
+        }
+    }
+}
+
+.footer-info-links {
+    margin-top: 40px;
+
+    h3 {
+        color: $color-gray-light;
+        text-transform: uppercase;
+        font-family: $font-family-b;
+        font-size: 0.83vw;
+        letter-spacing: 0.17vw;
+        margin-bottom: 1.11vw;
+        line-height: 1vw;
+    }
+}
+
+.footer-links-conteiner {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(3, auto);
+    grid-column-gap: 2.08vw;
+    grid-row-gap: 1.11vw;
+
+    a {
+        color: $color-black;
+        font-size: 0.97vw;
+        line-height: 1.67vw;
+        letter-spacing: 0.02vw;
+
+        &:hover,
+        &:focus {
+            text-decoration: underline;
+            outline: none;
+        }
+    }
+}
+
+.footer-email {
+
+    h3 {
+        color: $color-gray-light;
+        text-transform: uppercase;
+        font-family: $font-family-b;
+        font-size: 0.83vw;
+        letter-spacing: 0.17vw;
+    }
+
+    span {
+        font-family: $font-family-b;
+        font-size: 2.22vw;
+        letter-spacing: -0.035vw;
+        color: $color-Purple-dark;
+    }
+}
+
+.footer-form {
+
+    h3 {
+        color: $color-gray-light;
+        text-transform: uppercase;
+        font-family: $font-family-b;
+        font-size: 0.83vw;
+        letter-spacing: 0.17vw;
+        margin-bottom: 1.11vw;
+    }
+
+}
+
+.myfootergrid {
+    display: grid;
+    grid-gap: 2.08vw;
+
+    >div {
+        display: flex;
+        gap: 2.08vw;
+    }
+
+             .textarealabel {
+            position: relative;
+        
+              &::after {
+                content: '';
+                position: absolute;
+                width: 2.78vw;
+                height: 2.78vw;
+                right: 0.28vw;
+                top: 0.28vw;
+                background-image: url(../images/icons/icon-edit.svg); 
+                background-repeat: no-repeat;
+            }
+        }
+
+    .inputlabel {
+        position: relative;
+
+        &:first-child {
+
+            &::after {
+                content: '';
+                position: absolute;
+                width: 2.78vw;
+                height: 2.78vw;
+                right: 0.28vw;
+                top: 0.28vw;
+                background-image: url(../images/icons/icon-user.svg);
+            }
+        }
+
+           &:nth-child(2) {
+
+            &::after {
+                content: '';
+                position: absolute;
+                width: 2.78vw;
+                height: 2.78vw;
+                right: 0.28vw;
+                top: 0.28vw;
+                background-image: url(../images/icons/icon-mail.svg);
+            }
+        }
+    }
+
+    input {
+        height: 3.33vw;
+        width: 18.75vw;
+        border-radius: 1.11vw;
+        background-color: rgba($color: $color-gray-soft, $alpha: 0.24);
+        outline: none;
+        border: none;
+        padding: 0.56vw 1.11vw;
+        font-size: 1.25vw;
+        transition: background-color $animation;
+        padding-right: 3.06vw;
+
+        &::placeholder {
+            color: $color-black;
+        }
+
+        &:hover,
+        &:focus {
+            background-color: rgba($color: $color-gray-soft, $alpha: 0.45);
+        }
+    }
+
+    textarea {
+        height: 5.56vw;
+        width: 25.69vw;
+        border-radius: 1.11vw;
+        background-color: rgba($color: $color-gray-soft, $alpha: 0.24);
+        outline: none;
+        border: none;
+        resize: none;
+        padding: 1.11vw;
+        font-size: 1.25vw;
+        letter-spacing: 0.14vw;
+        transition: background-color $animation, border $animation;
+        border: 2px solid rgba($color: $color-Purple-dark, $alpha: 0.24);
+        color: $color-Purple-dark;
+        padding-right: 3.06vw;
+
+        &:hover,
+        &:focus {
+            background-color: rgba($color: $color-gray-soft, $alpha: 0.45);
+            border: 2px solid rgba($color: $color-Purple-dark, $alpha: 0.45);
+        }
+
+        &::placeholder {
+            font-family: $font-family-b;
+            color: $color-Purple-dark;
+        }
+    }
+
+    button {
+        width: 11.81vw;
+        height: 5.56vw;
+        box-shadow: 0px 0.56vw 1.67vw rgba(38, 50, 56, 0.1), 0px 1.11vw 2.22vw rgba(38, 50, 56, 0.08);
+        text-shadow: 0px 0.14vw 0.28vw rgba(38, 50, 56, 0.16), 0px 0.28vw 0.56vw rgba(38, 50, 56, 0.08);
+        letter-spacing: 0.2vw;
+        font-family: $font-family-b;
+        background-color: $color-Purple-dark;
+        color: $color-white;
+    }
+}
+
+
+.footer-form {
+    margin-top: 3.33vw;
+}
+
+@media (max-width: 600px) {
+
+    .footer {
+        display: none;
+    }
+
+    .footer-mobile {
+        position: relative;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .original-footer {
+        font-size: 3.89vw;
+        font-family: $font-family-m;
+        width: 70%;
+        margin-bottom: 1.2vw;
+        line-height: 6.67vw;
+    }
+
+    .madein {
+        font-size: 3.33vw;
+        font-family: $font-family-r;
+        color: $color-green-dark;
+        width: 70%;
+        line-height: 6.11vw;
+        margin-bottom: 1.5vw;
+    }
+
+    .address-footer-mobile {
+        font-size: 5vw;
+        color: $color-Purple-dark;
+        font-family: $font-family-b;
+        margin-bottom: 6.67vw;
+    }
+
+    .flex-icons-footer-mobile {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        gap: 8.33vw;
+        padding: 1.39vw 0 11.11vw 0;
+
+        img {
+            width: 11.11vw;
+            height: 11.11vw;
+        }
+    }
+
+    .background-footer-mobile {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 54.72vw;
+        height: 38.89vw;
+        z-index: -2;
+    }
+
+    .background-footer-mobile-dots {
+        position: absolute;
+        left: 15.28vw;
+        bottom: 0;
+        width: 28.61vw;
+        height: 18.61vw;
+        z-index: -1;
+    }
+}

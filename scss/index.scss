@@ -1,0 +1,11 @@
+@import "variables";
+@import "mixins";
+@import "normalize";
+@import "typography";
+@import "resertlocal";
+
+body {
+    margin: 0;
+    font-family: $font-family-r;
+    overflow-x: hidden;
+}

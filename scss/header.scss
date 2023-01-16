@@ -1,0 +1,157 @@
+@import "index";
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 2px 4px rgba(38, 50, 56, 0.16), 0px 4px 8px rgba(38, 50, 56, 0.08);
+    padding: 1.11vw 9.03vw;
+    background-color: #fff;
+}
+
+.header-nav {
+    margin: 0;
+    display: flex;
+    align-items: center;
+
+    >div {
+        background-color: $color-Yellow-dark;
+        width: 0.63vw;
+        height: 0.63vw;
+        border-radius: 50%;
+        margin: 0 1.11vw;
+    }
+
+    a {
+        color: $color-Purple-dark;
+        font-size: 1.25vw;
+        height: 48px;
+        padding: 0 10px;
+        line-height: 48px;
+        outline: none;
+        transition: color $animation;
+
+        &:first-child {
+            font-family: $font-family-b;
+            color: $color-black;
+        }
+
+        &:hover:not(:first-child) {
+            color: $color-Purple-light;
+        }
+
+        &:focus:not(:first-child) {
+            color: $color-Purple-light;
+        }
+    }
+}
+
+.header-logo {
+    display: flex;
+    align-items: center;
+
+    img {
+        width: 4.86vw;
+        height: 4.44vw;
+    }
+}
+
+.header-logo-title {
+    font-size: 3.33vw;
+    font-family: $font-family-b;
+}
+
+.header-button {
+    width: 11.81vw;
+    font-family: $font-family-b;
+    height: 4.44vw;
+    text-shadow: 0px 2px 4px rgba(38, 50, 56, 0.16), 0px 4px 8px rgba(38, 50, 56, 0.08);
+    font-size: 1.67vw;
+}
+
+.header-burger-menu {
+    display: none;
+}
+
+@media (max-width: 878px) {
+
+    .header-nav {
+        display: none;
+    }
+
+    .header-logo {
+
+        .header-logo-img {
+            display: none;
+        }
+    }
+
+    .header-logo-title {
+        font-size: 24px;
+        color: $color-gray-dark;
+    }
+
+    .header {
+
+        .header-button {
+            width: 128px;
+            height: 40px;
+            border-radius: 8px;
+            font-size: 18px;
+            box-shadow: 0px 2px 4px rgba(38, 50, 56, 0.16), 0px 4px 8px rgba(38, 50, 56, 0.08);
+            margin: 16px 0;
+        }
+    }
+
+    .header {
+        .header-burger-menu {
+        display: initial;
+        width: 40px;
+        height: 40px;
+    }
+    }
+    
+
+    .header {
+        padding: 0 15px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .header-nav {
+        display: none;
+    }
+
+    .header-logo {
+
+        .header-logo-img {
+            display: none;
+        }
+    }
+
+    .header-logo-title {
+        font-size: 6.67vw;
+        color: $color-gray-dark;
+    }
+
+    .header {
+
+            .header-button {
+            width: 35.56vw;
+            height: 11.11vw;
+            border-radius: 2.22vw;
+            font-size: 5vw;
+            box-shadow: 0px 2px 4px rgba(38, 50, 56, 0.16), 0px 4px 8px rgba(38, 50, 56, 0.08);
+            margin: 4.44vw 0;
+        }
+    }
+
+    .header {
+        .header-burger-menu {
+        display: initial;
+        width: 11.11vw;
+        height: 11.11vw;
+    }
+    }
+        }

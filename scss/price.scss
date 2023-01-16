@@ -1,0 +1,394 @@
+@import "index";
+
+.price {
+    padding: 5.14vw 9.03vw 3.82vw 9.03vw;
+}
+
+.price-h2 {
+    font-size: 4.44vw;
+    font-family: $font-family-b;
+    color: $color-black;
+    text-align: center;
+    margin-bottom: 2.36vw;
+}
+
+.price-h4 {
+    color: $color-gray-light;
+    font-size: 2.22vw;
+    text-align: center;
+    margin: 0;
+    font-family: $font-family-b;
+
+    span {
+        color: $color-Purple-dark;
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 0.83vw;
+            left: 0;
+            bottom: 0;
+            background-color: $color-Yellow-dark;
+            border-radius: 999px;
+            z-index: -1;
+        }
+    }
+}
+
+.price-grid,
+.price-grid-mobile {
+    margin-top: 2.78vw;
+    display: grid;
+    grid-template-columns: repeat(3, 25.69vw);
+    grid-template-rows: repeat(1, 37.22vw);
+    justify-content: center;
+    grid-column-gap: 2.08vw;
+
+    >div {
+        position: relative;
+        border-radius: 1.11vw;
+        padding: 2.22vw;
+        display: flex;
+        flex-direction: column;
+        background-color: #fff;
+
+        &:hover,
+        &:focus {
+            box-shadow: 0px 0.56vw 0.56vw rgba(38, 50, 56, 0.12), 0px 1.11vw 1.67vw rgba(38, 50, 56, 0.08);
+            outline: none;
+
+            .wiggle {
+                transform: translate(0, 0);
+                opacity: 1;
+            }
+        }
+
+        .wiggle {
+            opacity: 0;
+            transform: translate(2.08vw, -2.08vw);
+            position: absolute;
+            left: -2.08vw;
+            bottom: -2.08vw;
+            z-index: -1;
+            transition: transform $animation;
+        }
+
+        ul {
+            margin-top: 1.67vw;
+            font-size: 1.25vw;
+
+            li {
+                display: flex;
+                align-items: center;
+                position: relative;
+                line-height: 2.22vw;
+                margin-bottom: 1.11vw;
+                padding-left: 3.33vw;
+
+                &::before {
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    content: '';
+                    background-image: url("../images/icons/icon-check.svg");
+                    background-position: center center;
+                    background-repeat: no-repeat;
+                    background-size: 1.53vw;
+                    width: 2.22vw;
+                    height: 2.22vw;
+                    border-radius: 50%;
+                }
+            }
+        }
+
+        button {
+            height: 4.44vw;
+            width: 21.25vw;
+            margin-top: auto;
+        }
+    }
+}
+
+.price-grid-mobile {
+    display: none;
+}
+
+.price-h2-mobile {
+    display: none;
+}
+
+.price-h4-mobile {
+    display: none;
+}
+
+.student {
+    li {
+        &::before {
+            background-color: rgba($color: $color-gray-soft, $alpha: 0.48);
+        }
+    }
+}
+
+.individual {
+    li {
+        &::before {
+            background-color: $color-Yellow-dark;
+        }
+    }
+}
+
+.corporate {
+    li {
+        &::before {
+            background-color: rgba($color: $color-green-light, $alpha: 0.48);
+        }
+    }
+}
+
+.individual-price {
+    .who {
+        position: relative;
+
+        div {
+            position: absolute;
+            right: 0;
+            top: 0;
+            border: 1px solid $color-Purple-dark;
+            height: 2.22vw;
+            width: 6.25vw;
+            border-radius: 6.88vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 0.83vw;
+            font-family: $font-family-b;
+            letter-spacing: 0.17vw;
+            color: $color-black;
+        }
+    }
+}
+
+
+.who {
+    color: $color-Purple-dark;
+    font-size: 1.25vw;
+    font-family: $font-family-b;
+    margin-bottom: 1.11vw;
+}
+
+.pay {
+    color: $color-black;
+    font-family: $font-family-b;
+
+    .dollars {
+        font-size: 3.33vw;
+        letter-spacing: -0.07vw;
+    }
+
+    .on {
+        display: inline-block;
+        text-transform: uppercase;
+        font-size: 0.83vw;
+        letter-spacing: 0.17vw;
+    }
+}
+
+.bt18 {
+    font-size: 1.25vw;
+}
+
+.bt24 {
+    font-size: 1.67vw;
+}
+
+@media (max-width: 600px) {
+
+    .price-h2 {
+        display: none;
+    }
+
+    .price-h4 {
+        display: none;
+    }
+
+    .price-h2-mobile {
+        display: block;
+        font-size: 8.89vw;
+        font-family: $font-family-b;
+        margin-top: 11vw;
+    }
+
+    .price-h4-mobile {
+        display: block;
+        color: $color-gray-light;
+        font-size: 6.67vw;
+        margin-bottom: 11vw;
+
+        span {
+            color: $color-black;
+            position: relative;
+
+            &::after {
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 3.33vw;
+                left: 0;
+                bottom: -3px;
+                background-color: $color-Yellow-dark;
+                border-radius: 999px;
+                z-index: -1;
+            }
+        }
+    }
+
+    .price-grid-mobile {
+        display: grid;
+        grid-template-columns: repeat(1, auto);
+        grid-template-rows: repeat(3, auto);
+        margin: 0;
+
+        .bt24 {
+            width: 78.33vw;
+            height: 13.33vw;
+            border-radius: 4.44vw;
+            font-size: 5vw;
+            font-family: $font-family-b;
+            color: $color-white;
+            align-self: center;
+        }
+    }
+
+    .price-grid {
+        display: none;
+    }
+
+    .who {
+        position: relative;
+        display: flex;
+        align-items: center;
+        margin-bottom: 3vw;
+        justify-content: space-between;
+
+        div {
+            border: 1px solid $color-gray;
+            height: 8.89vw;
+            width: 25vw;
+            border-radius: 27.50vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 3.33vw;
+            font-family: $font-family-b;
+            letter-spacing: 0.65vw;
+            color: $color-black;
+        }
+
+        span {
+            font-size: 5vw;
+            color: $color-black;
+        }
+    }
+
+    .individual,
+    .student {
+        li {
+            &::before {
+                background-color: $color-Yellow-dark;
+            }
+        }
+    }
+
+    .pay {
+        color: $color-Purple-dark;
+
+        .dollars {
+            font-size: 6.67vw;
+            letter-spacing: -0.28vw;
+        }
+
+        .on {
+            font-size: 3.33vw;
+            letter-spacing: 0.65vw;
+        }
+    }
+
+    .price-grid-mobile {
+        grid-row-gap: 6.67vw;
+
+        >div {
+            padding: 24px;
+            border-radius: 4.44vw;
+            box-shadow: 0px 0.56vw 1.11vw rgba(38, 50, 56, 0.16), 0px 1.11vw 2.22vw rgba(38, 50, 56, 0.08);
+
+            &:hover,
+            &:focus {
+                box-shadow: 0px 0.56vw 1.11vw rgba(38, 50, 56, 0.16), 0px 1.11vw 2.22vw rgba(38, 50, 56, 0.08);
+            }
+
+            .student {
+                margin-top: 5vw;
+
+                li {
+                    font-size: 3.89vw;
+                    font-family: $font-family-m;
+                    padding-left: 9vw;
+                    padding-bottom: 6.67vw;
+                    line-height: 6.67vw;
+
+                    &::before {
+                        width: 6.67vw;
+                        height: 6.67vw;
+                        background-size: 4.72vw;
+                    }
+                }
+            }
+        }
+    }
+
+    .price {
+        padding: 0 4.44vw;
+        padding-bottom: 22.22vw;
+    }
+
+    .price-grid-mobile {
+
+        .wow-effect {
+            background-color: $color-Purple-dark;
+
+            button {
+                background-color: $color-white;
+                color: $color-black;
+            }
+
+            .who {
+
+                span,
+                div {
+                    color: $color-green-light;
+                }
+
+                div {
+                    border-color: $color-green-light;
+                }
+            }
+
+            .pay {
+                color: $color-white;
+                text-shadow: 0px 1.11vw 0px #000000;
+            }
+
+            .student {
+                li {
+                    &::before {
+                        background-image: url("../images/icons/icon-check-white.svg");
+                        background-color: $color-black;
+                    }
+                }
+            }
+        }
+    }
+
+}
